@@ -17,12 +17,12 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     } else {
       message.textContent = 'Login successful!';
       message.className = 'success';
-      window.location.replace(`startexam.html`)
+      window.location.replace(`startExam.html`)
       sessionStorage.setItem('currentUser' , `${user.firstName} ${user.lastName}`)
     }
   });
 
   document.querySelector('.signup').addEventListener('click' , function () {
-    window.location.href = `signup.html`
+    window.location.href = `../index.html`
   })
   

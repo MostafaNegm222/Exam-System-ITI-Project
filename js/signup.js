@@ -89,10 +89,10 @@ document.getElementById('firstName').addEventListener('blur', function () {
     message.textContent = 'User registered successfully!';
     message.className = 'success';
     this.reset();
-    window.location.replace(`login.html`)
+    window.location.replace(`/pages/login.html`)
   });
 
   document.querySelector('.login').addEventListener('click' , function () {
-    window.location.href = `login.html`
+    window.location.href = `/pages/login.html`
   })
   
