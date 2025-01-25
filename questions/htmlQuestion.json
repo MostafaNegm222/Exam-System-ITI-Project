@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Why We Use <br> Element",
+    "answers": [
+      { "answer": "To Make Text Bold", "is_true_answer": false },
+      { "answer": "To Make Text Italic", "is_true_answer": false },
+      { "answer": "To Add Breakline", "is_true_answer": true },
+      { "answer": "To Create Horizontal Line", "is_true_answer": false }
+    ]
+  },
+  {
+    "title": "Is <img> Element Has Attribute href",
+    "answers": [
+      { "answer": "Yes", "is_true_answer": false },
+      { "answer": "No Its For Anchor Tag <a>", "is_true_answer": true },
+      { "answer": "All Elements Has This Attribute", "is_true_answer": false },
+      { "answer": "Answer 1 And 3 Is Right", "is_true_answer": false }
+    ]
+  },
+  {
+    "title": "How Can We Make Element Text Bold",
+    "answers": [
+      { "answer": "Putting It Inside <b> Tag", "is_true_answer": false },
+      { "answer": "Putting It Inside <strong> Tag", "is_true_answer": false },
+      { "answer": "Customizing It With Font-Weight Property In CSS", "is_true_answer": false },
+      { "answer": "All Answers Is Right", "is_true_answer": true }
+    ]
+  },
+  {
+    "title": "What Is The Right Hierarchy For Creating Part Of Page",
+    "answers": [
+      { "answer": "<h2> Then <p> Then <h1> Then <p> Then <h3> Then <p> Then <img>", "is_true_answer": false },
+      { "answer": "<h1> Then <p> Then <h3> Then <p> Then <h2> Then <p> Then <img>", "is_true_answer": false },
+      { "answer": "<h2> Then <p> Then <h3> Then <p> Then <h1> Then <p> Then <img>", "is_true_answer": false },
+      { "answer": "All Solutions Is Wrong", "is_true_answer": true }
+    ]
+  },
+  {
+    "title": "How Can We Include External Page Inside Our HTML Page",
+    "answers": [
+      { "answer": "By Using Include in HTML", "is_true_answer": false },
+      { "answer": "By Using Load In HTML", "is_true_answer": false },
+      { "answer": "By Using iFrame Tag", "is_true_answer": true },
+      { "answer": "All Solutions Is Wrong", "is_true_answer": false }
+    ]
+  },
+  {
+    "title": "What Is The Tag That Not Exists in HTML",
+    "answers": [
+      { "answer": "<object>", "is_true_answer": false },
+      { "answer": "<basefont>", "is_true_answer": false },
+      { "answer": "<abbr>", "is_true_answer": false },
+      { "answer": "All Tags Is Exists in HTML", "is_true_answer": true }
+    ]
+  },
+  {
+    "title": "How We Specify Document Type Of HTML5 Page",
+    "answers": [
+      { "answer": "<DOCTYPE html>", "is_true_answer": false },
+      { "answer": "<DOCTYPE html5>", "is_true_answer": false },
+      { "answer": "<!DOCTYPE html5>", "is_true_answer": false },
+      { "answer": "<!DOCTYPE html>", "is_true_answer": true }
+    ]
+  },
+  {
+    "title": "What Is The Element Thats Not Exists in HTML5 Semantics",
+    "answers": [
+      { "answer": "<article>", "is_true_answer": false },
+      { "answer": "<section>", "is_true_answer": false },
+      { "answer": "<blockquote>", "is_true_answer": true },
+      { "answer": "<aside>", "is_true_answer": false }
+    ]
+  },
+  {
+    "title": "In HTML Can We Use This Way To Add Attributes",
+    "answers": [
+      { "answer": "<div class='class-name'>", "is_true_answer": false },
+      { "answer": "<div class=class-name>", "is_true_answer": false },
+      { "answer": "<div class=\"class-name\">", "is_true_answer": false },
+      { "answer": "All Is Right", "is_true_answer": true }
+    ]
+  }
+]

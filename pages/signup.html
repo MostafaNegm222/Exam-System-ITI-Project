@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        form { margin: 20px 0; }
+        input { display: block; margin: 10px 0; }
+        .error { color: red; }
+        .success { color: green; }
+      </style>
+      
+    <title>Sign up</title>
+</head>
+<body>
+    
+
+
+
+    <form id="signUpForm">
+        <label for="firstName">first Name:</label>
+        <input type="text" id="firstName" required />
+        <p id="firstNameError" class="error"></p>
+
+        <label for="lastNameusername">last Name:</label>
+        <input type="text" id="lastName" required />
+        <p id="lastNameError" class="error"></p>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <p id="emailError" class="error"></p>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+        <p id="passwordError" class="error"></p>
+      
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required />
+        <p id="confirmPasswordError" class="error"></p>
+      
+        <button type="submit">Sign Up</button>
+        <p id="signUpMessage"></p>
+      </form>
+      <button class="login">login</button>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="../js/signup.js"></script>
+</body>
+</html>

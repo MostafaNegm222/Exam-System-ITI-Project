@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form { margin: 20px 0; }
+        input { display: block; margin: 10px 0; }
+        .error { color: red; }
+        .success { color: green; }
+      </style>
+    <title>Login</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form id="loginForm">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" required />
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required />
+        <button type="submit">Login</button>
+        <p id="loginMessage"></p>
+      </form>
+      <button class="signup">Sign up</button>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
+
+
+<!-- turn json to array of objects answer and true or false -->
+<!-- turn questions to constructor function and methods -->

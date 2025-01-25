@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>failed</title>
+</head>
+<body>
+    <h1>failed</h1>
+    <video src="fail.mp4" width="400px" controls autoplay></video>
+    <button class="logout">Logout</button>
+    <button class="back">back to exam</button>
+
+
+    <script>
+        document.querySelector('.logout').addEventListener('click' , function () {
+            sessionStorage.clear()
+            window.location.replace("login.html")
+        })
+        document.querySelector('.back').addEventListener('click' , function () {
+            window.location.replace('startexam.html')
+        })
+    </script>
+</body>
+</html>
