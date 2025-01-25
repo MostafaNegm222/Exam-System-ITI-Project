@@ -38,16 +38,6 @@ h2 {
     box-shadow: var(--main-shadow);
 }
 
-.name-input {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    column-gap: 1.5em;
-}
-.first-name-input , .last-name-input {
-    flex: 45% 1 1;
-}
 input {
     width: 100%;
     padding: 12px 16px;
@@ -107,9 +97,6 @@ form + p a {
 @media (max-width:676px) {
     .form-container {
         width: 100%;
-    }
-    .name-input {
-        display: block;
     }
     img {
         width: 150px;

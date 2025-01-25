@@ -20,7 +20,8 @@
             window.location.replace("login.html")
         })
         document.querySelector('.back').addEventListener('click' , function () {
-            window.location.replace('startexam.html')
+            sessionStorage.removeItem("category")
+            window.location.replace('chooseExam.html')
         })
        
     </script>

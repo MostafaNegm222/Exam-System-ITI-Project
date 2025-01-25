@@ -1,0 +1,92 @@
+[
+    {
+      "title": "Which of the following is a JavaScript data type?",
+      "answers": [
+        { "answer": "Number", "is_true_answer": true },
+        { "answer": "Letter", "is_true_answer": false },
+        { "answer": "Symbol", "is_true_answer": false },
+        { "answer": "Character", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you write 'Hello World' in an alert box?",
+      "answers": [
+        { "answer": "msg('Hello World');", "is_true_answer": false },
+        { "answer": "alertBox('Hello World');", "is_true_answer": false },
+        { "answer": "alert('Hello World');", "is_true_answer": true },
+        { "answer": "msgBox('Hello World');", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you create a function in JavaScript?",
+      "answers": [
+        { "answer": "function = myFunction()", "is_true_answer": false },
+        { "answer": "function myFunction()", "is_true_answer": true },
+        { "answer": "function:myFunction()", "is_true_answer": false },
+        { "answer": "create myFunction()", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which operator is used to assign a value to a variable?",
+      "answers": [
+        { "answer": "=", "is_true_answer": true },
+        { "answer": "-", "is_true_answer": false },
+        { "answer": "*", "is_true_answer": false },
+        { "answer": "x", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you call a function named 'myFunction'?",
+      "answers": [
+        { "answer": "call myFunction()", "is_true_answer": false },
+        { "answer": "myFunction()", "is_true_answer": true },
+        { "answer": "call function myFunction()", "is_true_answer": false },
+        { "answer": "execute myFunction()", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you write a conditional statement for executing some statements only if 'i' is equal to 5?",
+      "answers": [
+        { "answer": "if i = 5 then", "is_true_answer": false },
+        { "answer": "if (i == 5)", "is_true_answer": true },
+        { "answer": "if i == 5 then", "is_true_answer": false },
+        { "answer": "if (i = 5)", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How does a 'for' loop start?",
+      "answers": [
+        { "answer": "for (i = 0; i <= 5)", "is_true_answer": false },
+        { "answer": "for (i = 0; i <= 5; i++)", "is_true_answer": true },
+        { "answer": "for i = 1 to 5", "is_true_answer": false },
+        { "answer": "for (i <= 5; i++)", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How can you add a comment in JavaScript?",
+      "answers": [
+        { "answer": "// This is a comment", "is_true_answer": true },
+        { "answer": "'This is a comment", "is_true_answer": false },
+        { "answer": "<!-- This is a comment -->", "is_true_answer": false },
+        { "answer": "# This is a comment", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "What is the correct way to write a JavaScript array?",
+      "answers": [
+        { "answer": "var colors = (1:'red', 2:'green', 3:'blue')", "is_true_answer": false },
+        { "answer": "var colors = ['red', 'green', 'blue']", "is_true_answer": true },
+        { "answer": "var colors = 'red', 'green', 'blue'", "is_true_answer": false },
+        { "answer": "var colors = {'red', 'green', 'blue'}", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you round the number 7.25 to the nearest integer in JavaScript?",
+      "answers": [
+        { "answer": "Math.rnd(7.25)", "is_true_answer": false },
+        { "answer": "Math.round(7.25)", "is_true_answer": true },
+        { "answer": "round(7.25)", "is_true_answer": false },
+        { "answer": "rnd(7.25)", "is_true_answer": false }
+      ]
+    }
+  ]

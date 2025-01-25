@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/global.css">
-
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
+        .container img {
+            width: 400px;
+        }
+        .container button {
+            height: 48px;
+            padding: 0 40px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: rgba(165, 56, 53, 1);
+            color: #fff;
+            border: none;
+        }
+        .container button:focus {
+            outline: none;
+        }
+    </style>
     <title>error</title>
 </head>
 <body>
-    <h1>error</h1>
+    <div class="container">
+        <img src="/images/404 error.svg" alt="error 404">
+        <p>Sorry !! , Page not Found</p>
+        <button>Back to Home</button>
+    </div>
+
+
+    <script>
+
+        document.querySelector('button').addEventListener('click' , function () {
+            window.location.replace('/pages/chooseExam.html')
+        })
+    </script>
 </body>
 </html>

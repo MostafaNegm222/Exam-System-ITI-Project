@@ -1,3 +1,4 @@
+
 document.getElementById('firstName').addEventListener('blur', function () {
     const error = document.getElementById('firstNameError');
     if (this.value.trim() === '') {
@@ -85,11 +86,16 @@ document.getElementById('firstName').addEventListener('blur', function () {
   
     users.push({ firstName,lastName, email, password });
     localStorage.setItem('users', JSON.stringify(users));
-  
-    message.textContent = 'User registered successfully!';
-    message.className = 'success';
+    Swal.fire({
+      title: "Success",
+      text: "Successful Register",
+      icon: "success",
+      confirmButtonColor: "rgba(165, 56, 53, 1)"
+    });
+    setTimeout(() => {
+      window.location.replace(`/pages/login.html`)
+    }, 3000);
     this.reset();
-    window.location.replace(`/pages/login.html`)
   });
 
   document.querySelector('.login').addEventListener('click' , function () {

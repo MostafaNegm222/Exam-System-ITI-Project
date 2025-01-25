@@ -5,39 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/global.css">
-      
+    <link rel="stylesheet" href="styles/signup.css">
     <title>Sign up</title>
 </head>
 <body>
     
 
+    <div class="container">
+        <img src="images/ColoredLogo 1.png" alt="ITI logo">
+        <h2>Register Now </h2>
+        <div class="form-container">
+            <form id="signUpForm">
+                <div class="name-input">
+                    <div class="first-name-input">
+                        <label for="firstName">first Name:</label>
+                        <input type="text" id="firstName" required placeholder="Enter Your First Name"/>
+                        <p id="firstNameError" class="error">  </p>
+                    </div>
+            
+                    <div class="last-name-input">
+                        <label for="lastNameusername">last Name:</label>
+                        <input type="text" id="lastName" required placeholder="Enter Your Last Name"/>
+                        <p id="lastNameError" class="error"></p>
+                    </div>
+                </div>
+              
+                <div class="email-input">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="Enter Your Email"/>
+                    <p id="emailError" class="error"></p>
+                </div>
+              
+                <div class="password-input">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required placeholder="Enter Your Password (8 characters)"/>
+                    <p id="passwordError" class="error"></p>
+                </div>
+              
+                <div class="config-password">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required placeholder="Repeat your password"/>
+                    <p id="confirmPasswordError" class="error"></p>
+                </div>
 
+                <input type="submit" value="Register now"/>
+                <p id="signUpMessage"></p>
+              </form>
+              <p>Have already an account?<a href="#" class="login">login</a></p>
+        </div>
+        <p>Copyright ©2025 All Rights Reserved. Information Technology Institute (ITI).</p>
+    </div>
 
-    <form id="signUpForm">
-        <label for="firstName">first Name:</label>
-        <input type="text" id="firstName" required />
-        <p id="firstNameError" class="error"></p>
-
-        <label for="lastNameusername">last Name:</label>
-        <input type="text" id="lastName" required />
-        <p id="lastNameError" class="error"></p>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
-        <p id="emailError" class="error"></p>
-      
-        <label for="password">Password:</label>
-        <input type="password" id="password" required />
-        <p id="passwordError" class="error"></p>
-      
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" required />
-        <p id="confirmPasswordError" class="error"></p>
-      
-        <button type="submit">Sign Up</button>
-        <p id="signUpMessage"></p>
-      </form>
-      <button class="login">login</button>
+    
 
 
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

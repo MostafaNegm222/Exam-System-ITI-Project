@@ -1,0 +1,92 @@
+[
+    {
+      "title": "What does CSS stand for?",
+      "answers": [
+        { "answer": "Computer Style Sheets", "is_true_answer": false },
+        { "answer": "Creative Style System", "is_true_answer": false },
+        { "answer": "Cascading Style Sheets", "is_true_answer": true },
+        { "answer": "Colorful Style Sheets", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which property is used to change the background color in CSS?",
+      "answers": [
+        { "answer": "color", "is_true_answer": false },
+        { "answer": "background-color", "is_true_answer": true },
+        { "answer": "bgcolor", "is_true_answer": false },
+        { "answer": "background-style", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you select elements with class name 'example'?",
+      "answers": [
+        { "answer": ".example", "is_true_answer": true },
+        { "answer": "#example", "is_true_answer": false },
+        { "answer": "example", "is_true_answer": false },
+        { "answer": "*example", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which CSS property controls the text size?",
+      "answers": [
+        { "answer": "font-style", "is_true_answer": false },
+        { "answer": "text-style", "is_true_answer": false },
+        { "answer": "font-size", "is_true_answer": true },
+        { "answer": "text-size", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you make each word in a text start with a capital letter?",
+      "answers": [
+        { "answer": "text-transform: uppercase;", "is_true_answer": false },
+        { "answer": "text-transform: capitalize;", "is_true_answer": true },
+        { "answer": "transform: capitalize;", "is_true_answer": false },
+        { "answer": "font-variant: small-caps;", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which property is used to change the font of an element?",
+      "answers": [
+        { "answer": "font-family", "is_true_answer": true },
+        { "answer": "font-style", "is_true_answer": false },
+        { "answer": "font-weight", "is_true_answer": false },
+        { "answer": "font-variant", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "How do you add a comment in CSS?",
+      "answers": [
+        { "answer": "// This is a comment", "is_true_answer": false },
+        { "answer": "/* This is a comment */", "is_true_answer": true },
+        { "answer": "<!-- This is a comment -->", "is_true_answer": false },
+        { "answer": "'This is a comment", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which CSS property is used to add space between the content and border of an element?",
+      "answers": [
+        { "answer": "margin", "is_true_answer": false },
+        { "answer": "padding", "is_true_answer": true },
+        { "answer": "border-spacing", "is_true_answer": false },
+        { "answer": "spacing", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "What is the correct CSS syntax for making all <p> elements bold?",
+      "answers": [
+        { "answer": "p {text-size: bold;}", "is_true_answer": false },
+        { "answer": "p {font-weight: bold;}", "is_true_answer": true },
+        { "answer": "p {font-style: bold;}", "is_true_answer": false },
+        { "answer": "<p style='font-size:bold;'>", "is_true_answer": false }
+      ]
+    },
+    {
+      "title": "Which property is used to change the left margin of an element?",
+      "answers": [
+        { "answer": "padding-left", "is_true_answer": false },
+        { "answer": "margin-left", "is_true_answer": true },
+        { "answer": "indent", "is_true_answer": false },
+        { "answer": "margin", "is_true_answer": false }
+      ]
+    }
+  ]

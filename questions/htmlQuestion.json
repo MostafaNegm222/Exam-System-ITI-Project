@@ -79,5 +79,14 @@
       { "answer": "<div class=\"class-name\">", "is_true_answer": false },
       { "answer": "All Is Right", "is_true_answer": true }
     ]
+  },
+  {
+    "title": "In HTML5, which tag is used to play audio files?",
+    "answers": [
+      { "answer": "<sound>", "is_true_answer": false },
+      { "answer": "<audio>", "is_true_answer": true },
+      { "answer": "<music>", "is_true_answer": false },
+      { "answer": "<play>", "is_true_answer": false }
+    ]
   }
 ]

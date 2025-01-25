@@ -1,0 +1,12 @@
+document.querySelector('.html').addEventListener('click' , function () {
+    sessionStorage.setItem('category' , 'html')
+    window.location.replace('startExam.html')
+})
+document.querySelector('.css').addEventListener('click' , function () {
+    sessionStorage.setItem('category' , 'css')
+    window.location.replace('startExam.html')
+})
+document.querySelector('.js').addEventListener('click' , function () {
+    sessionStorage.setItem('category' , 'js')
+    window.location.replace('startExam.html')
+})

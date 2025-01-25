@@ -15,9 +15,18 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
       message.textContent = 'Invalid Email or password.';
       message.className = 'error';
     } else {
-      message.textContent = 'Login successful!';
-      message.className = 'success';
-      window.location.replace(`startExam.html`)
+      // message.textContent = 'Login successful!';
+      // message.className = 'success';
+      // window.location.replace(`startExam.html`)
+      Swal.fire({
+        title: "Success",
+        text: "Successful Register",
+        icon: "success",
+        confirmButtonColor: "rgba(165, 56, 53, 1)"
+      });
+      setTimeout(() => {
+        window.location.replace(`chooseExam.html`)
+      }, 3000);
       sessionStorage.setItem('currentUser' , `${user.firstName} ${user.lastName}`)
     }
   });

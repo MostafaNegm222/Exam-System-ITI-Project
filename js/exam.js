@@ -8,6 +8,7 @@ let submitButton = document.querySelector('.submit-button');
 let resultsContainer = document.querySelector('.results');
 let countdownElements = document.querySelector('.countdown');
 let flaggedContainer = document.querySelector('.flagged-questions');
+let categorySpan = document.querySelector('.category span')
 
 // Variables
 let currentIndex = 0;
@@ -17,6 +18,7 @@ let countdownInterval;
 let flaggedQuestions = []; // Array to store indices of flagged questions
 let questionsArray = [];   // Array to store Question instances
 let userAnswers = [];      // Array to store user's answers
+let questionsFile = sessionStorage.getItem('category')
 
 // Question Class
 class Question {
@@ -35,9 +37,9 @@ class Question {
 // Main function to get questions
 function getQuestion() {
     // Show loading state
-    resultsContainer.innerHTML = '<span class="loading">Loading questions...</span>';
+    quizArea.innerHTML = '<span class="loading">Loading questions...</span>';
 
-    fetch("/questions/htmlQuestion.json")
+    fetch(`/questions/${questionsFile}Question.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok (status: ${response.status})`);
@@ -46,11 +48,11 @@ function getQuestion() {
         })
         .then(data => {
             // Clear loading message
-            resultsContainer.innerHTML = '';
+            quizArea.innerHTML = '';
 
             // Check if data is empty
             if (!data || data.length === 0) {
-                resultsContainer.innerHTML = `<span class='error'>No questions available at the moment. Please check back later.</span>`;
+                quizArea.innerHTML = `<span class='error'>No questions available at the moment. Please check back later.</span>`;
                 return; // Stop execution
             }
 
@@ -128,6 +130,8 @@ function getQuestion() {
             // Handle error state
             window.location.replace(`error.html`)
         });
+
+        categorySpan.innerHTML = questionsFile.toUpperCase()
 }
 getQuestion();
 
