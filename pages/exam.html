@@ -4,29 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/exam.css">
     <title>Quiz App</title>
 </head>
 <body>
+    <div class="container">
+        <div class="header-container">
+            <img src="../images/ColoredLogo 1.png" alt="logo iti">
+            <button class="logout">Logout</button>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-app">
+                <div class="quiz-info">
+                    <div class="countdown">3:00</div>
+                    <div class="category">Category : <span>HTML</span></div>
+                    <div class="count">Questions : <span></span></div>
+                </div>
     
-    <div class="quiz-app">
-        <div class="quiz-info">
-            <div class="category">Category : <span>HTML</span></div>
-            <div class="count">Questions Count: <span></span></div>
+                <div class="question-container">
+                    <div class="quiz-area"></div>
+                    <hr>
+                    <div class="answers-area"></div>
+                    <hr>
+                    <div class="buttons-container">
+                        <div class="navigators">
+                            <button class="previous-button">Previous</button>
+                            <button class="next-button">next</button>
+                        </div>
+                    <button class="submit-button">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flagged-container">
+                <h4>Marked Questions</h4>
+                <div class="flagged-questions">No Flagged Questions</div>
+            </div>
         </div>
-        <div class="quiz-area"></div>
-        <div class="answers-area"></div>
-        <button class="submit-button">Submit Answer</button>
-        <div class="bullets">
-            <div class="spans"></div>
-            <div class="countdown"></div>
         </div>
-        <div class="results"></div>
-        <div class="flagged-questions"></div>
-        <button class="previous-button">Prev</button>
-        <button class="next-button">next</button>
-    </div>
 
 
     <script src="../js/exam.js"></script>

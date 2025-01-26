@@ -10,3 +10,7 @@ document.querySelector('.js').addEventListener('click' , function () {
     sessionStorage.setItem('category' , 'js')
     window.location.replace('startExam.html')
 })
+document.querySelector('.logout').addEventListener('click' , function () {
+    sessionStorage.clear()
+    window.location.replace("login.html")
+})

@@ -5,7 +5,6 @@ let answersArea = document.querySelector('.answers-area');
 let previousButton = document.querySelector('.previous-button');
 let nextButton = document.querySelector('.next-button');
 let submitButton = document.querySelector('.submit-button');
-let resultsContainer = document.querySelector('.results');
 let countdownElements = document.querySelector('.countdown');
 let flaggedContainer = document.querySelector('.flagged-questions');
 let categorySpan = document.querySelector('.category span')
@@ -13,7 +12,7 @@ let categorySpan = document.querySelector('.category span')
 // Variables
 let currentIndex = 0;
 let rightAnswers = 0;
-let totalDuration = 120; // Total duration in seconds
+let totalDuration = 1500; // Total duration in seconds
 let countdownInterval;
 let flaggedQuestions = []; // Array to store indices of flagged questions
 let questionsArray = [];   // Array to store Question instances
@@ -64,7 +63,7 @@ function getQuestion() {
             let questionCount = questionsArray.length;
 
             // Update question count
-            countSpan.innerHTML = questionCount;
+            
 
             // Shuffle questions
             shuffle(questionsArray);
@@ -123,12 +122,9 @@ function getQuestion() {
             };
         })
         .catch(error => {
-            // Clear loading message
-            resultsContainer.innerHTML = '';
-
             console.error('There was a problem with the fetch operation:', error);
             // Handle error state
-            window.location.replace(`error.html`)
+            // window.location.replace(`error.html`)
         });
 
         categorySpan.innerHTML = questionsFile.toUpperCase()
@@ -140,7 +136,7 @@ function addQuestionData(questionObj, count) {
     // Clear previous content
     quizArea.innerHTML = "";
     answersArea.innerHTML = "";
-
+    countSpan.innerHTML = `${currentIndex + 1} / ${count}`;
     // Create question title
     let questionTitle = document.createElement('h2');
     let questionText = document.createTextNode(questionObj.title);
@@ -175,15 +171,14 @@ function addQuestionData(questionObj, count) {
     });
 
     // Add Flag Question button
-    let flagButton = document.createElement('button');
-    flagButton.textContent = 'Flag Question';
-    flagButton.className = 'flag-button';
+    let flagButton = document.createElement('i');
+    flagButton.className = 'flag-button fa-regular fa-flag';
     quizArea.appendChild(flagButton);
 
     // Check if this question is already flagged
     if (flaggedQuestions.includes(currentIndex)) {
         // Change button text to 'Unflag Question'
-        flagButton.textContent = 'Unflag Question';
+        flagButton.className = 'flag-button fa-solid fa-flag';
     }
 
     // Handle flag button click
@@ -192,11 +187,14 @@ function addQuestionData(questionObj, count) {
         if (flaggedQuestions.includes(currentIndex)) {
             // Unflag
             unflagQuestion(currentIndex);
-            flagButton.textContent = 'Flag Question';
+            flagButton.className = 'flag-button fa-regular fa-flag';
+            if (flaggedQuestions.length == 0) {
+                flaggedContainer.innerHTML = 'No Flagged Questions'
+            }
         } else {
             // Flag
             flagQuestion(currentIndex);
-            flagButton.textContent = 'Unflag Question';
+            flagButton.className = 'flag-button fa-solid fa-flag';
         }
     };
 
@@ -258,8 +256,8 @@ function updateFlaggedQuestionsUI() {
         };
 
         // Create delete button
-        let deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
+        let deleteButton = document.createElement('i');
+        deleteButton.className = 'delete-button fa-solid fa-trash';
         deleteButton.onclick = () => {
             // Unflag the question
             unflagQuestion(questionIndex);
@@ -267,8 +265,11 @@ function updateFlaggedQuestionsUI() {
             if (currentIndex === questionIndex) {
                 let flagButton = document.querySelector('.flag-button');
                 if (flagButton) {
-                    flagButton.textContent = 'Flag Question';
+                    flagButton.className = 'flag-button fa-regular fa-flag';
                 }
+            }
+            if (flaggedQuestions.length == 0) {
+                flaggedContainer.innerHTML = 'No Flagged Questions'
             }
         };
 
@@ -297,16 +298,16 @@ function navigateToQuestion(index) {
 function updateNavigationButtons(count) {
     // Show or hide Previous button
     if (currentIndex > 0) {
-        previousButton.style.display = 'inline-block';
+        previousButton.disabled = false;
     } else {
-        previousButton.style.display = 'none';
+        previousButton.disabled = true;
     }
-
+    
     // Show or hide Next button
     if (currentIndex < count - 1) {
-        nextButton.style.display = 'inline-block';
+        nextButton.disabled = false;
     } else {
-        nextButton.style.display = 'none';
+        nextButton.disabled = true;
     }
 
     // Always display Submit button
@@ -366,7 +367,9 @@ function countdown(duration) {
         seconds = seconds < 10 ? `0${seconds}` : seconds;
 
         countdownElements.innerHTML = `${minutes}:${seconds}`;
-
+        if (duration <= 30) {
+            countdownElements.classList.add('timed')
+        }
         if (--duration < 0) {
             clearInterval(countdownInterval);
 
@@ -396,3 +399,8 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+document.querySelector('.logout').addEventListener('click' , function () {
+    sessionStorage.clear()
+    window.location.replace("login.html")
+})
