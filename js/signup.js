@@ -99,6 +99,6 @@ document.getElementById('firstName').addEventListener('blur', function () {
   });
 
   document.querySelector('.login').addEventListener('click' , function () {
-    window.location.href = `/pages/login.html`
+    window.location.href = `./pages/login.html`
   })
   

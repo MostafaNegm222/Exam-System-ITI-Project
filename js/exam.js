@@ -115,16 +115,16 @@ function getQuestion() {
 
                 // Redirect to the appropriate page based on the score
                 if (percentage >= 50) {
-                    window.location.replace(`success.html`);
+                    window.location.replace(`./success.html`);
                 } else {
-                    window.location.replace(`failed.html`);
+                    window.location.replace(`./failed.html`);
                 }
             };
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
             // Handle error state
-            // window.location.replace(`error.html`)
+            window.location.replace(`./error.html`)
         });
 
         categorySpan.innerHTML = questionsFile.toUpperCase()
@@ -386,7 +386,7 @@ function countdown(duration) {
             sessionStorage.setItem('percentage', percentage);
 
             // Redirect to timeout page
-            window.location.replace(`timeout.html`);
+            window.location.replace(`./timeout.html`);
         }
 
     }, 1000);
@@ -402,5 +402,5 @@ function shuffle(array) {
 
 document.querySelector('.logout').addEventListener('click' , function () {
     sessionStorage.clear()
-    window.location.replace("login.html")
+    window.location.replace("./login.html")
 })
