@@ -1,0 +1,117 @@
+.container {
+    padding-top: var(--padding-section) ;
+}
+.header-container {
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.header-container img {
+    max-height: 100%;
+}
+
+.logout {
+    font-size: 1rem;
+    padding: 0.75em 1.5em;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout::before {
+    content: "\f08b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transform: rotate(180deg);
+    margin-right: 8px;
+}
+
+
+
+.result-container {
+    background-color: var(--section-background);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--main-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width:991px) {
+    .result-container {
+        width: 100%;
+    }
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.result-container span , .grad span {
+    color: var(--main-color);
+}
+
+.result-container .image-container {
+    width: 70%;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+.result-container .image-container img {
+    max-width: 100%;
+}
+
+.result-container h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.result-container .grad {
+    margin-bottom:12px ;
+}
+
+.result-container i {
+    color: var(--main-color);
+}
+.back {
+    width: 60%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    background-color: #fff;
+    margin-top: 24px;
+}
+
+@media (max-width:991px) {
+    :root {
+        font-size: 14px;
+    }
+    img.logo {
+        height: 64px;
+    }
+    .result-container h4 {
+        text-align: center;
+    }
+}
+
+@media (max-width:676px) {
+    img.logo {
+        height: 52px;
+    }
+}

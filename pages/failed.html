@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/result.css">
 
     <title>failed</title>
 </head>
 <body>
-    <h1>failed</h1>
-    <video src="../videos/fail.mp4" width="400px" controls autoplay></video>
-    <button class="logout">Logout</button>
-    <button class="back">back to exam</button>
+    <div class="container">
+        <div class="header-container">
+            <img src="../images/ColoredLogo 1.png" alt="logo iti" class="logo">
+            <button class="logout">Logout</button>
+        </div>
+        <h2>Result</h2>
+        <div class="result-container">
+            <div class="image-container">
+                <img src="../images/Business failure-bro 1.png" alt="failed image">
+            </div>
+            <h4></h4>
+            <p class="grad">Your grid is: <span></span></p>
+            <p class="stars"></p>
+            <button class="back">Back to home</button>
+        </div>
+    </div>
 
+    <audio src="../audios/falied.mp3" autoplay></audio>
 
-    <script>
-        document.querySelector('.logout').addEventListener('click' , function () {
-            sessionStorage.clear()
-            window.location.replace("login.html")
-        })
-        document.querySelector('.back').addEventListener('click' , function () {
-            sessionStorage.removeItem("category")
-            window.location.replace('chooseExam.html')
-        })
-    </script>
+    <script src="../js/falied.js"></script>
 </body>
 </html>

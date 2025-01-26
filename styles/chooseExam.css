@@ -84,12 +84,18 @@ h2 {
     cursor: pointer;
 }
 
-h4 {
+.choose h4 {
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 1.2em;
 }
 
+.choose p::before {
+    content: "\f017";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 100;
+    margin-right: 8px;
+}
 
 
 @media (max-width:991px) {

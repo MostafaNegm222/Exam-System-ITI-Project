@@ -12,7 +12,7 @@ let categorySpan = document.querySelector('.category span')
 // Variables
 let currentIndex = 0;
 let rightAnswers = 0;
-let totalDuration = 1500; // Total duration in seconds
+let totalDuration = 120; // Total duration in seconds
 let countdownInterval;
 let flaggedQuestions = []; // Array to store indices of flagged questions
 let questionsArray = [];   // Array to store Question instances
@@ -52,7 +52,7 @@ function getQuestion() {
             // Check if data is empty
             if (!data || data.length === 0) {
                 quizArea.innerHTML = `<span class='error'>No questions available at the moment. Please check back later.</span>`;
-                return; // Stop execution
+                return; 
             }
 
             // Create Question instances and store in questionsArray
@@ -61,11 +61,7 @@ function getQuestion() {
                 questionsArray.push(question);
             });
             let questionCount = questionsArray.length;
-
-            // Update question count
             
-
-            // Shuffle questions
             shuffle(questionsArray);
 
             // Display the first question
@@ -74,40 +70,28 @@ function getQuestion() {
             // Start the countdown
             countdown(totalDuration);
 
-            // Handle Next button click
             nextButton.onclick = () => {
-                // Save the user's answer
                 saveUserAnswer();
-
                 if (currentIndex < questionCount - 1) {
                     currentIndex++;
                     displayQuestion(questionCount);
                 }
             };
 
-            // Handle Previous button click
             previousButton.onclick = () => {
-                // Save the user's answer
                 saveUserAnswer();
-
                 if (currentIndex > 0) {
                     currentIndex--;
                     displayQuestion(questionCount);
                 }
             };
 
-            // Handle Submit button click
             submitButton.onclick = () => {
-                // Save the user's answer
                 saveUserAnswer();
-
-                // Check all answers
                 checkAllAnswers();
 
                 // Calculate percentage score
                 let percentage = (rightAnswers / questionsArray.length) * 100;
-
-                // Save percentage in sessionStorage
                 sessionStorage.setItem('percentage', percentage);
 
                 // Clear the countdown
@@ -136,7 +120,10 @@ function addQuestionData(questionObj, count) {
     // Clear previous content
     quizArea.innerHTML = "";
     answersArea.innerHTML = "";
+
+    // show the number of question
     countSpan.innerHTML = `${currentIndex + 1} / ${count}`;
+
     // Create question title
     let questionTitle = document.createElement('h2');
     let questionText = document.createTextNode(questionObj.title);
@@ -147,7 +134,6 @@ function addQuestionData(questionObj, count) {
     questionObj.answers.forEach((answerObj, index) => {
         let mainDiv = document.createElement("div");
         mainDiv.className = "answer";
-
         let radioInput = document.createElement("input");
         radioInput.name = "question";
         radioInput.type = "radio";
@@ -166,18 +152,17 @@ function addQuestionData(questionObj, count) {
 
         mainDiv.appendChild(radioInput);
         mainDiv.appendChild(theLabel);
-
         answersArea.appendChild(mainDiv);
     });
 
-    // Add Flag Question button
+    // Add Flag Question icon
     let flagButton = document.createElement('i');
     flagButton.className = 'flag-button fa-regular fa-flag';
     quizArea.appendChild(flagButton);
 
     // Check if this question is already flagged
     if (flaggedQuestions.includes(currentIndex)) {
-        // Change button text to 'Unflag Question'
+        // Change button text to 'Unflag icon'
         flagButton.className = 'flag-button fa-solid fa-flag';
     }
 
@@ -188,7 +173,7 @@ function addQuestionData(questionObj, count) {
             // Unflag
             unflagQuestion(currentIndex);
             flagButton.className = 'flag-button fa-regular fa-flag';
-            if (flaggedQuestions.length == 0) {
+            if (flaggedQuestions.length == 0) {  // ---> fix bug to show empty container
                 flaggedContainer.innerHTML = 'No Flagged Questions'
             }
         } else {
@@ -198,7 +183,6 @@ function addQuestionData(questionObj, count) {
         }
     };
 
-    // Update buttons visibility
     updateNavigationButtons(count);
 }
 
@@ -255,7 +239,7 @@ function updateFlaggedQuestionsUI() {
             navigateToQuestion(questionIndex);
         };
 
-        // Create delete button
+        // Create delete icon
         let deleteButton = document.createElement('i');
         deleteButton.className = 'delete-button fa-solid fa-trash';
         deleteButton.onclick = () => {
@@ -328,32 +312,6 @@ function checkAllAnswers() {
             rightAnswers++;
         }
     });
-}
-
-// Function to show results
-function showResults(count) {
-    // Remove quiz elements
-    quizArea.remove();
-    answersArea.remove();
-    previousButton.remove();
-    nextButton.remove();
-    submitButton.remove();
-
-    // Calculate percentage score
-    let percentage = (rightAnswers / count) * 100;
-
-    // Save percentage in sessionStorage
-    sessionStorage.setItem('percentage', percentage);
-
-    // Redirect to the appropriate page based on the score
-    if (percentage >= 50) {
-        window.location.replace(`success.html`);
-    } else {
-        window.location.replace(`failed.html`);
-    }
-
-    // Remove flagged questions container
-    flaggedContainer.remove();
 }
 
 // Countdown function
