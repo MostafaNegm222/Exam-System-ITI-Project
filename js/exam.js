@@ -38,7 +38,7 @@ function getQuestion() {
     // Show loading state
     quizArea.innerHTML = '<span class="loading">Loading questions...</span>';
 
-    fetch(`/questions/${questionsFile}Question.json`)
+    fetch(`../questions/${questionsFile}Question.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok (status: ${response.status})`);
