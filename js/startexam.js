@@ -1,11 +1,11 @@
 document.querySelector('.start-exam').addEventListener('click' , function () {
-    window.location.replace("exam.html")
+    window.location.replace("./exam.html")
 })
 document.querySelector('.back').addEventListener('click' , function () {
-    window.location.replace("chooseExam.html")
+    window.location.replace("./chooseExam.html")
 })
 document.querySelector('.logout').addEventListener('click' , function () {
     sessionStorage.clear()
-    window.location.replace("login.html")
+    window.location.replace("./login.html")
 })
 
