@@ -111,6 +111,9 @@ form + p a {
     .name-input {
         display: block;
     }
+    .name-input > div {
+        margin-bottom: 2em;
+    }
     img {
         width: 150px;
     }
