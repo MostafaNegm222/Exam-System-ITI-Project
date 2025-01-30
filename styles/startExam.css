@@ -70,15 +70,16 @@ h2 {
     font-weight: 500;
     border-radius: 8px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .buttons-container button:focus {
     outline: none;
 }
 
-.start-exam {
+.buttons-container .start-exam {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--button);
     border: none;
 }
 .back {
@@ -113,5 +114,8 @@ h2 {
 @media (max-width:676px) {
     img {
         height: 52px;
+    }
+    .container {
+        padding-top: 0;
     }
 }

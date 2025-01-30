@@ -13,17 +13,19 @@
     <div class="container">
         <div class="header-container">
             <img src="../images/ColoredLogo 1.png" alt="logo iti" class="logo">
-            <button class="logout">Logout</button>
+            <button class="logout primary">Logout</button>
         </div>
-        <h2>Result</h2>
+        <h2>Exam Closed</h2>
         <div class="result-container">
             <div class="image-container">
                 <img src="../images/freepik--Stopwatch--inject-94.png" alt="failed image">
             </div>
             <h4></h4>
-            <button class="back">Back to home</button>
+            <button class="back primary">Back to home</button>
         </div>
+        <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
     </div>
+    <script src="../js/theme.js"></script>
     <script>
         document.querySelector("h4").innerHTML =`Sorry! ${sessionStorage.getItem('currentUser')} <span>Time is out</span>`;
         document.querySelector('.logout').addEventListener('click' , function () {

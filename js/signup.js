@@ -86,19 +86,22 @@ document.getElementById('firstName').addEventListener('blur', function () {
   
     users.push({ firstName,lastName, email, password });
     localStorage.setItem('users', JSON.stringify(users));
-    Swal.fire({
-      title: "Success",
-      text: "Successful Register",
-      icon: "success",
-      confirmButtonColor: "rgba(165, 56, 53, 1)"
-    });
-    setTimeout(() => {
       window.location.replace(`/pages/login.html`)
-    }, 3000);
-    this.reset();
+      this.reset();
   });
 
   document.querySelector('.login').addEventListener('click' , function () {
     window.location.href = `./pages/login.html`
   })
+
+
+  if (localStorage.getItem("theme") == 'light') {
+    document.querySelector("input[type='submit'].primary").style.color = "#fff"
+    document.querySelector("input[type='submit'].primary").addEventListener("mouseenter" , function (){
+      document.querySelector("input[type='submit'].primary").style.color = "rgba(184, 63, 59, 1)"
+  })
+  document.querySelector("input[type='submit'].primary").addEventListener("mouseleave" , function (){
+      document.querySelector("input[type='submit'].primary").style.color = "#fff"
+  })
+  }
   

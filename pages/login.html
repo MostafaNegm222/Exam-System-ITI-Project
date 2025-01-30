@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/login.css">
     <title>Login</title>
@@ -19,22 +20,21 @@
             <form id="loginForm">
                 <div class="email-input">
                     <label for="loginEmail">Email Address</label>
-                    <input type="email" id="loginEmail" required placeholder="Enter Your Email Address"/>
+                    <input type="email" id="loginEmail"  placeholder="Enter Your Email Address"/>
                 </div>
                 <div class="password-input">
                     <label for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" required placeholder="Enter Your Password"/>
+                    <input type="password" id="loginPassword"  placeholder="Enter Your Password"/>
                 </div>
-                <input type="submit" value="Login"/>
                 <p id="loginMessage"></p>
+                <input type="submit" value="Login" class="primary"/>
               </form>
-              <p>You don’t have account?<a href="#" class="signup">Register now</a></p>
         </div>
         <p>Copyright ©2025 All Rights Reserved. Information Technology Institute (ITI).</p>
+        <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/theme.js"></script>
     <script src="../js/login.js"></script>
 </body>
 </html>

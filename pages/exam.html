@@ -13,15 +13,17 @@
     <div class="container">
         <div class="header-container">
             <img src="../images/ColoredLogo 1.png" alt="logo iti">
-            <button class="logout">Logout</button>
+            <button class="logout primary">Logout</button>
         </div>
 
         <div class="quiz-container">
             <div class="quiz-app">
                 <div class="quiz-info">
-                    <div class="countdown">2:00</div>
-                    <div class="category">Category : <span>HTML</span></div>
-                    <div class="count">Questions : <span></span></div>
+                    <div class="category-container">
+                        <div class="category"><span>HTML</span> Exam</div>
+                        <div class="count">Questions : <span></span></div>
+                    </div>
+                    <div class="countdown"></div>
                 </div>
     
                 <div class="question-container">
@@ -33,7 +35,7 @@
                             <button class="previous-button">Previous</button>
                             <button class="next-button">next</button>
                         </div>
-                    <button class="submit-button">Submit</button>
+                    <button class="submit-button primary">Submit</button>
                     </div>
                 </div>
             </div>
@@ -43,9 +45,10 @@
                 <div class="flagged-questions">No Flagged Questions</div>
             </div>
         </div>
+        <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
         </div>
 
-
-    <script src="../js/exam.js"></script>
+        <script src="../js/theme.js"></script>
+        <script src="../js/exam.js"></script>
 </body>
 </html>

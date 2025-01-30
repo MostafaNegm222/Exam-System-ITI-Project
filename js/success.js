@@ -12,37 +12,37 @@ switch (sessionStorage.getItem('percentage')) {
     case '50' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star-half"></i>`
+                                                <i class="fa-solid fa-star-half"></i> / 5`
     break;
     case '60' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>`
+                                                <i class="fa-solid fa-star"></i> / 5`
     break;
     case '70' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star-half"></i>`
+                                                <i class="fa-solid fa-star-half"></i> / 5`
     break;
     case '80' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>`
+                                                <i class="fa-solid fa-star"></i> / 5`
     break;
     case '90' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star-half"></i>`
+                                                <i class="fa-solid fa-star-half"></i> / 5`
     break;
     case '100' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>`
+                                                <i class="fa-solid fa-star"></i> / 5`
     break;
 }

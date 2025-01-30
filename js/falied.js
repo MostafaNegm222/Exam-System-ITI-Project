@@ -10,17 +10,17 @@ document.querySelector('.result-container h4').innerHTML = `Sorry ${sessionStora
 document.querySelector('.grad span').innerHTML = `${sessionStorage.getItem('percentage')}%`
 switch (sessionStorage.getItem('percentage')) {
 case '10' :
-    document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star-half"></i>`
+    document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star-half"></i> / 5`
     break;
     case '20' :
-    document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>`
+    document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i> / 5`
     break;
     case '30' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
-                                                 <i class="fa-solid fa-star-half"></i>`
+                                                 <i class="fa-solid fa-star-half"></i> / 5`
     break;
     case '40' :
     document.querySelector('.stars').innerHTML = `<i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>`
+                                                <i class="fa-solid fa-star"></i> / 5`
     break;
 }

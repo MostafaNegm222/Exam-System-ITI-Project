@@ -51,11 +51,12 @@ input:focus {
 
 input::placeholder {
     color: var(--alt-text);
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 input + p {
     margin-top: 8px;
+    transition: var(--main-transition-duration);
 }
 input[type='submit'] {
     border: none;
@@ -80,6 +81,7 @@ form + p a {
 .form-container + p {
     margin: 2em 0;
     color: var(--alt-text);
+    text-align: center;
 }
 
 @media (max-width:991px) {
@@ -106,5 +108,8 @@ form + p a {
     }
     img {
         width: 150px;
+    }
+    .container {
+        padding-top: 20px;
     }
 }

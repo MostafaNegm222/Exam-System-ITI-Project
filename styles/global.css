@@ -12,12 +12,16 @@
    --alt-text:rgba(119, 119, 119, 1);
    --main-border: rgba(219, 219, 219, 1);
    --main-shadow: 0px 4px 19.2px -7px rgba(0,0,0,0.25);
-   --main-transition-duration:0.3s;
+   --main-transition-duration:0.4s;
    --padding-section:40px;
+   --input-color:#fff;
+   --main-text:#000;
+   --button : #fff
 }
 body {
     font-family: "Poppins", serif;
     background-color: var(--main-background);
+    color: var(--main-text);
 }
 ul {
     list-style: none;
@@ -28,6 +32,7 @@ a {
 .container {
     padding: 0 15px;
     margin: 0 auto;
+    position: relative;
 }
 @media (min-width:768px) {
     .container {
@@ -50,3 +55,38 @@ a {
 .success {
     color: green; 
 }
+
+input {
+    background-color: var(--input-color);
+}
+.buttons-container .primary, .primary {
+    transition: var(--main-transition-duration);
+    color: #fff;
+}
+
+.buttons-container .primary:hover ,.primary:hover , input[type='submit'].primary:hover{
+    background-color: var(--section-background);
+    border: 2px solid var(--main-border);
+    color: var(--main-color);
+}
+
+.theme-toggle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--main-border);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 56px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color:#ffffff;
+    box-shadow: var(--main-shadow);
+    color: var(--main-color);
+    cursor: pointer;
+    transition: var(--main-transition-duration);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

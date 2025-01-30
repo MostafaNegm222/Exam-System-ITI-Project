@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/iti-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="styles/signup.css">
     <title>Sign up</title>
@@ -19,47 +20,47 @@
                 <div class="name-input">
                     <div class="first-name-input">
                         <label for="firstName">first Name:</label>
-                        <input type="text" id="firstName" required placeholder="Enter Your First Name"/>
+                        <input type="text" id="firstName"  placeholder="Enter Your First Name"/>
                         <p id="firstNameError" class="error">  </p>
                     </div>
             
                     <div class="last-name-input">
                         <label for="lastNameusername">last Name:</label>
-                        <input type="text" id="lastName" required placeholder="Enter Your Last Name"/>
+                        <input type="text" id="lastName"  placeholder="Enter Your Last Name"/>
                         <p id="lastNameError" class="error"></p>
                     </div>
                 </div>
               
                 <div class="email-input">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" required placeholder="Enter Your Email"/>
+                    <input type="email" id="email"  placeholder="Enter Your Email"/>
                     <p id="emailError" class="error"></p>
                 </div>
               
                 <div class="password-input">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" required placeholder="Enter Your Password (8 characters)"/>
+                    <input type="password" id="password"  placeholder="Enter Your Password (8 characters)"/>
                     <p id="passwordError" class="error"></p>
                 </div>
               
                 <div class="config-password">
                     <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" required placeholder="Repeat your password"/>
+                    <input type="password" id="confirmPassword"  placeholder="Repeat your password"/>
                     <p id="confirmPasswordError" class="error"></p>
                 </div>
 
-                <input type="submit" value="Register now"/>
+                <input type="submit" value="Register now" class="primary" />
                 <p id="signUpMessage"></p>
               </form>
               <p>Have already an account?<a href="#" class="login">login</a></p>
         </div>
         <p>Copyright ©2025 All Rights Reserved. Information Technology Institute (ITI).</p>
+        <button class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
     </div>
 
     
 
-
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="./js/theme.js"></script>
       <script src="../js/signup.js"></script>
 </body>
 </html>

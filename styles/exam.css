@@ -84,6 +84,18 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
+.category-container {
+    display: flex;
+    align-items: center;
+}
+.category {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+    padding-right: 8px ;
+    border-right: 2px solid var(--main-border);
+    margin-right: 8px
+}
 .countdown.timed {
     color: var(--main-color);
     font-weight: 600;
@@ -96,16 +108,19 @@
 }
 
 @media (max-width:676px) {
-    .countdown , .category {
-        width: 45%;
-        margin-bottom: 20px;
+    .container {
+        padding-top: 0px;
     }
-    .category {
-        text-align: right;
+    .quiz-container {
+        margin-top: 20px;
     }
-    .count {
+    .category-container {
         width: 100%;
-        text-align: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+    .countdown {
+        margin: 0 auto;
     }
 }
 .question-container {
@@ -114,7 +129,11 @@
     padding: var(--padding-section);
     box-shadow: var(--main-shadow);
 }
-
+@media (max-width:676px) {
+    .question-container {
+        padding: 20px;
+    }
+}
 .question-container hr:first-of-type {
     background-color: var(--main-border);
     margin:24px 0 40px;
@@ -176,12 +195,17 @@
 }
 .flagged-item a{
     margin-right: 16px;
-    color: var(--main-color);
+    color: #000;
 
 }
 .flagged-item i {
     font-size: 20px;
     cursor: pointer;
+    transition: var(--main-transition-duration);
+}
+
+.flagged-item i:hover {
+    color: var(--main-color);
 }
 
 .buttons-container {
@@ -216,6 +240,13 @@
     border: none;
     background-color: var(--main-color);
     color: #fff;
+    padding: 0.65em 1.5em;
+    transition: var(--main-transition-duration);
+}
+.buttons-container button.submit-button:hover {
+    color: var(--main-color);
+    background-color: var(--section-background);
+    border: 2px solid var(--main-border);
 }
 
 .buttons-container button:focus {
@@ -228,7 +259,6 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 20px;
     }
     .navigators button {
         width: 45%;
@@ -236,5 +266,18 @@
 
     .buttons-container button.submit-button {
         width: 100%;
+        padding: 0.75em 1.5em;
     }
+    .quiz-area h2 {
+        font-size: 1.25rem;
+    }
+}
+
+.flagged-item span {
+    transition: var(--main-transition-duration);
+    cursor: pointer;
+}
+
+.flagged-item span:hover {
+    color: var(--main-color);
 }

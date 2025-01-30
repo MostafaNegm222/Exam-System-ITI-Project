@@ -10,7 +10,9 @@
     align-items: center;
     padding-top: var(--padding-section);
 }
-
+.container img {
+    width: 190px
+}
 form > div {
     margin-bottom: 2em;
 }
@@ -44,32 +46,21 @@ input::placeholder {
     font-size: 1rem;
 }
 
-input + p {
-    margin-top: 8px;
-}
 input[type='submit'] {
     border: none;
     font-weight: 500;
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--button);
     font-size: 16px;
 }
-
-form + p {
-    margin-top: 52px;
-    color: var(--alt-text);
-    text-align: center;
-}
-
-form + p a {
-    margin-left: 8px;
-    font-weight: 600;
-    color: var(--main-color);
+#loginMessage {
+    margin-bottom: 16px;
 }
 
 .form-container + p {
     margin: 2em 0;
     color: var(--alt-text);
+    text-align: center;
 }
 
 @media (max-width:991px) {
@@ -79,8 +70,8 @@ form + p a {
     .form-container {
         width: 95%;
     }
-    img {
-        width: 180px;
+    .container img {
+        width: 150px
     }
 }
 
@@ -90,5 +81,8 @@ form + p a {
     }
     img {
         width: 150px;
+    }
+    .container {
+        padding-top: 20px;
     }
 }

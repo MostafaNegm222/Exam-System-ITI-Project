@@ -9,3 +9,4 @@ document.querySelector('.logout').addEventListener('click' , function () {
     window.location.replace("./login.html")
 })
 
+document.querySelector(".header-container + h2").innerHTML = `${sessionStorage.getItem("category")} Exam`

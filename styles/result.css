@@ -1,5 +1,5 @@
 .container {
-    padding-top: var(--padding-section) ;
+    padding: var(--padding-section) 20px ;
 }
 .header-container {
     height: 74px;
@@ -93,8 +93,8 @@
     border-radius: 8px;
     cursor: pointer;
     border: 2px solid var(--main-color);
-    color: var(--main-color);
-    background-color: #fff;
+    color: var(--button);
+    background-color: var(--main-color);
     margin-top: 24px;
 }
 
@@ -113,5 +113,8 @@
 @media (max-width:676px) {
     img.logo {
         height: 52px;
+    }
+    .container {
+        padding-top: 0;
     }
 }

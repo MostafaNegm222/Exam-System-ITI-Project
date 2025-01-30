@@ -71,6 +71,12 @@ h2 {
     flex-direction: column;
     border-radius: 8px;
     cursor: pointer;
+    transition: var(--main-transition-duration);
+}
+
+.exams-container div:hover {
+    background-color: rgba(66, 65, 67, 1);
+    transform: translateY(-15px)
 }
 
 .choose h4 {
@@ -112,4 +118,12 @@ h2 {
     img {
         height: 52px;
     }
+    .container {
+        padding-top: 0;
+    }
+}
+
+.nav-buttons {
+    display: flex;
+    column-gap: 12px;
 }

@@ -176,6 +176,7 @@ function addQuestionData(questionObj, count) {
             if (flaggedQuestions.length == 0) {  // ---> fix bug to show empty container
                 flaggedContainer.innerHTML = 'No Flagged Questions'
             }
+            
         } else {
             // Flag
             flagQuestion(currentIndex);
@@ -230,8 +231,11 @@ function updateFlaggedQuestionsUI() {
         flaggedItem.className = 'flagged-item';
 
         // Create question title link
-        let questionLink = document.createElement('a');
-        questionLink.href = '#';
+        let questionLink = document.createElement('span');
+        if (localStorage.getItem("theme") == "dark") {
+        } else {
+            questionLink.classList.remove("link-dark")
+        }
         questionLink.textContent = `Question ${questionIndex + 1}`;
         questionLink.onclick = (e) => {
             e.preventDefault();
