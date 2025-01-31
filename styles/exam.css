@@ -281,3 +281,7 @@
 .flagged-item span:hover {
     color: var(--main-color);
 }
+
+input[type='radio']:checked + label {
+    font-weight: 700;
+}
