@@ -21,5 +21,5 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   });
 
   if (localStorage.getItem("theme") == "light") {
-    document.querySelector(".login").style.color = "rgba(184, 63, 59, 1)"
+    document.querySelector(".login").style.color = "rgba(184, 63, 59, 1)";
   }

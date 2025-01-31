@@ -232,11 +232,7 @@ function updateFlaggedQuestionsUI() {
 
         // Create question title link
         let questionLink = document.createElement('span');
-        if (localStorage.getItem("theme") == "dark") {
-        } else {
-            questionLink.classList.remove("link-dark")
-        }
-        questionLink.textContent = `Question ${questionIndex + 1}`;
+        questionLink.textContent = `${questionsArray[questionIndex].title}`;
         questionLink.onclick = (e) => {
             e.preventDefault();
             // Navigate to the question

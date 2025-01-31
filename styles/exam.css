@@ -193,10 +193,14 @@
 .flagged-item:not(:last-child) {
     border-bottom: 1px solid var(--main-border);
 }
-.flagged-item a{
+.flagged-item span{
     margin-right: 16px;
-    color: #000;
-
+    display: inline-block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 .flagged-item i {
     font-size: 20px;

@@ -7,7 +7,7 @@ function applyTheme(theme) {
         document.documentElement.style.setProperty("--alt-text", "rgb(176, 176, 176)");
         document.documentElement.style.setProperty("--button", "rgb(255, 255, 255)");
 
-        document.querySelectorAll("input").forEach(ele => ele.style.color = "#fff");
+        document.querySelectorAll("input:not([type='submit'])").forEach(ele => ele.style.color = "#fff");
         document.querySelectorAll("a:not(.login)").forEach(ele => ele.style.color = "#fff");
 
         const themeButton = document.querySelector(".theme-toggle");
