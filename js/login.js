@@ -19,7 +19,3 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         sessionStorage.setItem('currentUser' , `${user.firstName} ${user.lastName}`)
     }
   });
-
-  if (localStorage.getItem("theme") == "light") {
-    document.querySelector(".login").style.color = "rgba(184, 63, 59, 1)";
-  }

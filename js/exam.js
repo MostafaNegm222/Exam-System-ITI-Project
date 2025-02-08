@@ -113,6 +113,7 @@ function getQuestion() {
 
         categorySpan.innerHTML = questionsFile.toUpperCase()
 }
+
 getQuestion();
 
 // Function to display a question
