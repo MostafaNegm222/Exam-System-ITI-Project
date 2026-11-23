@@ -1,0 +1,9 @@
+{
+  "name": "exam-system-iti-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Client-side exam system (vanilla HTML, CSS, JavaScript)",
+  "scripts": {
+    "test": "node --test tests/questions.test.js"
+  }
+}
